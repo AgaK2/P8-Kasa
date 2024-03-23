@@ -1,0 +1,28 @@
+.error_all {
+    font-family: 'Montserrat';
+    width: 872px;
+    text-align: center;
+    margin-left: 284px;
+}
+
+.code404 {
+    font-size: 288px;
+    color: #FF6060;
+    font-weight: 700;
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+
+.error_text_1 {
+    font-size: 36px;
+    color: #FF6060;
+    font-weight: 500;
+    margin-bottom: 140px;
+}
+
+.error_text_2 {
+    font-size: 18px;
+    color: #000000;
+    font-weight: 500;
+    margin-bottom: 140px;
+}

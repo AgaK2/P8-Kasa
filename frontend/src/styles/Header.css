@@ -1,0 +1,24 @@
+.header {
+    width: 1240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 45px 100px 0px 100px;
+}
+
+.header_nav {
+    gap: 57px;
+    display: flex;
+}
+
+.header_link {
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: 500;
+    color: #000000;
+    text-decoration: none;
+}
+
+ .underline {
+    text-decoration: underline;
+} 
