@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 function Gallery() {
     const [properties, setProperties] = useState([])
 
+   // Appel à l'API avec fetch afin de récupérer dynamiquement des images
     useEffect(() => {
         fetch("http://localhost:8080/api/properties")
             .then((response) => response.json())

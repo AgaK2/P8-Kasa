@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import Carrousel from "../components/Carrousel"
 import Collapse from '../components/Collapse'
 import Tags from '../components/Tags'
@@ -9,16 +9,24 @@ import "../styles/Logement.css"
 
 function Logement() {
     const [logementData, setLogementData] = useState(null)
-    const { id } = useParams() //ID właściwości, dla której pobierane są slajdy
-    
+    const { id } = useParams() //ID de la propriété pour laquelle les photos sont chargées
+    const nav = useNavigate()
 
+    // Appel à l'API avec fetch afin de récupérer dynamiquement des données
     useEffect(() => {
         fetch(`http://localhost:8080/api/properties/${id}`)
-            .then(response => response.json())
+            .then(response => {
+                if(!response.ok) {
+                // S'il y a une erreur lors de la récupération des données, une page 404 apparaîtra
+            nav("/404")    
+            } else {
+                return response.json()
+            }
+        })
             .then(data => setLogementData(data))
-            //.catch(error => console.error(error))
-            console.log(id) 
-    }, [id])
+            .catch(error => console.error(error))
+
+    }, [id, nav]) // useEffect sera exécuté chaque fois que les valeurs d'id ou de nav changent
 
     if (!logementData) {
         return <div>Loading...</div>
@@ -54,23 +62,3 @@ function Logement() {
 }
 
 export default Logement
-
-//<Carrousel images={logementData.pictures} />
-//         
-//
-//
-
-// import Carrousel from "../components/Carrousel"
-
-// function Logement() {
-
-    
-//     return (
-//         <div>
-//             <Carrousel />
-//         </div>
-//     )
-// }
-
-// export default Logement
-

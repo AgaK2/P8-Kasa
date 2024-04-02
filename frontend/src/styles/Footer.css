@@ -6,8 +6,8 @@
     height: 209px;
     background-color: #000000;
     justify-content: center;
-    margin-top: 20px;
-    padding: auto;
+    margin: 20px 0px -8px -8px;
+    padding-right: 16px;
 }
 
 .footer_logo {

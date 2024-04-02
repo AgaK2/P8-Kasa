@@ -1,7 +1,7 @@
-import "../styles/Carrousel.css"
 import { useState } from "react"
 import arrow_forward from "../assets/arrow_forward_carrousel.png"
 import arrow_back from "../assets/arrow_back_carrousel.png"
+import "../styles/Carrousel.css"
 
 
 function Carrousel({ images }) {
@@ -15,58 +15,25 @@ function Carrousel({ images }) {
     setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1)
   }
 
+  const pagination = `${currentSlide + 1}/${images.length}`
+
+  const alt = "Photo du logement"
 
   return (
+    // Conditions s'il y a plus d'une photo ou s'il n'y a qu'une seule photo dans le carrousel
     <div>
       {images.length > 1 && (
         <div className="carrousel">
           <img src={arrow_back} alt="Flèche gauche" onClick={prevSlide} className="carrousel_arrow_left" />
-          <img src={images[currentSlide]} alt="Card" className="carrousel_img" />
+          <img src={images[currentSlide]} alt={alt} className="carrousel_img" />
+          <div className="carrousel_pagination">{pagination}</div>
           <img src={arrow_forward} alt="Flèche droite" onClick={nextSlide} className="carrousel_arrow_right" />
         </div>
       )}
-      {images.length === 1 && <img src={images[0]} alt="Logement-img" />}
+
+      {images.length === 1 && <img src={images[0]} className="carrousel_img" alt={alt} />}
     </div>
   )
 }
+
 export default Carrousel
-
-
-
-// function nextSlide() {
-//     currentSlide < slides.length - 1 ? setCurrentSlide(currentSlide + 1) : null
-// }
-
-// function prevSlide() {
-//     currentSlide > 0 ? setCurrentSlide(currentSlide - 1) : null
-// }
-
-// const nextSlide = () => {
-//   if (currentSlide < slides.length - 1) {
-//     setCurrentSlide(currentSlide + 1);
-//   }
-//   console.log("click")
-// };
-
-// const prevSlide = () => {
-//   if (currentSlide > 0) {
-//     setCurrentSlide(currentSlide - 1);
-//   }
-// };
-
-// return (
-//   <div className="carrousel">
-//       {slides.length > 0 && (
-//           <>
-//           {slides.length > 1 && (
-//               <img src={arrow_back} alt="Flèche gauche" onClick={prevSlide}/>
-//           )}
-//           <img src={slides[currentSlide]} alt="Slide"/>
-//           {slides.length > 1 && (
-//               <img src={arrow_forward} alt="Flèche droite" onClick={nextSlide} />
-//           )}
-//           </>
-//       )}
-//   </div>
-// )
-// }

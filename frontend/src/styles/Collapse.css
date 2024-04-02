@@ -1,9 +1,8 @@
 .collapse_all {
     display: flex;
     flex-direction: column;
-    width: 1023px;
+    width: 83%;
     margin-bottom: 30px;
-    margin-left: auto;
 }
 
 .collapse_item {
@@ -23,7 +22,7 @@
     font-size: 24px;
     font-weight: 700;
     color: #FFFFFF;
-    margin: 12px 0px 10px 15px;
+    margin: auto 15px;
 }
 
 .collapse_content_div {
@@ -34,6 +33,19 @@
 .collapse_content {
     font-size: 18px;
     margin-left: 20px;
+    margin-right: 20px;
+    line-height: 1.5;
+}
+
+.collapse_list {
+    list-style-type: none;
+    padding-left: 20px;
+    font-size: 18px;
+    margin-top: 27px;
+}
+
+.collapse_list li {
+    margin-bottom: 4px;
 }
 
 .arrow {

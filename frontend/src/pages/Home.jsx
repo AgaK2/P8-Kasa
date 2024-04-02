@@ -11,7 +11,7 @@ function Home() {
                 image={banner_1}
                 alt="Paysage - mer et rochers"
                 text="Chez vous, partout et ailleurs"
-                withShadow={true} />
+                withShadowAndDarken={true} />
             <Gallery />
         </div>
     )

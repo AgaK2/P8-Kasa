@@ -20,7 +20,15 @@ function Collapse({ title, content }) {// Définir deux props comme arguments de
             </div>
             {isOpen && (
                 <div className="collapse_content_div">
-                    <p className="collapse_content">{content}</p>
+                    {Array.isArray(content) ? (
+                        <ul className="collapse_list">
+                            {content.map((item, index) => (
+                                <li key={index}>{item}</li>
+                            ))}
+                        </ul>
+                    ) : ( 
+                        <p className="collapse_content">{content}</p>
+                    )}
                 </div>
             )}
         </div>

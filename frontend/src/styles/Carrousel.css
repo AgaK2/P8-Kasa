@@ -3,7 +3,7 @@
     position: relative;
     justify-content: center;
     align-items: center;
-    height: 415px;
+   
 
 }
 
@@ -14,6 +14,7 @@
     object-fit: cover;
     object-position: center;
     border-radius: 25px;
+    height: 415px;
 }
 
 .carrousel_arrow_left,
@@ -28,4 +29,12 @@
 
 .carrousel_arrow_right {
     right: 20px;
+}
+
+.carrousel_pagination {
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 500;
+    bottom: 25px;
 }
