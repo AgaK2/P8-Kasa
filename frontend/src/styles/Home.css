@@ -1,8 +1,7 @@
-.body_home {
-    width: 1240px;
-    /*margin-left: 100px;
+ .body_home {
+     /* width: 1240px; */
      display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center; */
-}
+     align-items: center;
+     flex-direction: column;
+     justify-content: center;
+ }

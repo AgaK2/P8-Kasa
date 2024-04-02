@@ -1,5 +1,31 @@
-.carrousel-all {
-    width: 1240px;
+.carrousel {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
     height: 415px;
-    background-color: blueviolet;
+
+}
+
+.carrousel_img {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+}
+
+.carrousel_arrow_left,
+.carrousel_arrow_right {
+    position: absolute;
+    cursor: pointer;
+}
+
+.carrousel_arrow_left {
+    left: 20px;
+}
+
+.carrousel_arrow_right {
+    right: 20px;
 }

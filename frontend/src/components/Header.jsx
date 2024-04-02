@@ -4,11 +4,11 @@ import { useState } from "react"
 import "../styles/Header.css"
 
 function Header() {
-const [activeLink, setActiveLink] = useState("")
+    const [activeLink, setActiveLink] = useState("")
 
     function linkClick(e) {
-        setActiveLink(e) 
-}
+        setActiveLink(e)
+    }
 
     return (
         <header className="header">

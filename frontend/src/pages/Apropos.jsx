@@ -8,10 +8,12 @@ import "../styles/Apropos.css"
 function Apropos() {
     return (
         <div className="apropos">
+
             <Banner
                 image={banner_2}
-                alt="Une vallée entre de hautes montagnes enneigées" />
-            {collapseTextAPropos.map((item, index) => (    //Mapping de chaque élément du tableau
+                alt="Une vallée entre de hautes montagnes enneigées"
+            />
+            {collapseTextAPropos.map((item, index) => (  //Mapping de chaque élément du tableau
                 <Collapse
                     key={index}
                     title={item.title}

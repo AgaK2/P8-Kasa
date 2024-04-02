@@ -1,0 +1,33 @@
+ .logement {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .logement_title {
+     color: #FF6060;
+     font-size: 36px;
+     font-weight: 500;
+     margin-bottom: 0px;
+ }
+
+ .logement_location {
+     font-size: 18px;
+     font-weight: 500;
+ }
+
+ .logement_title_host {
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .logement_host_rate {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     margin-top: 24px;
+ }
+
+ .logement_collapse {
+     display: flex;
+     gap: 80px;
+ }

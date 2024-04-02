@@ -1,49 +1,34 @@
 import "../styles/Carrousel.css"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import arrow_forward from "../assets/arrow_forward_carrousel.png"
 import arrow_back from "../assets/arrow_back_carrousel.png"
 
-function Carrousel() {
-    const [slides, setSlides] = useState([])
-    const [currentSlide, setCurrentSlide] = useState(0)
-    const id = "0"  //ID właściwości, dla której pobierane są slajdy
 
-    useEffect(() => {
-        fetch(`http://localhost:8080/api/properties/${id}`)
-            .then(response => response.json())
-            .then(data => setSlides(data))
-            
-    }, [])
+function Carrousel({ images }) {
+  const [currentSlide, setCurrentSlide] = useState(0)
 
-    const nextSlide = () => {
-        if (currentSlide < slides.length - 1) {
-          setCurrentSlide(currentSlide + 1);
-        }
-      };
-    
-      const prevSlide = () => {
-        if (currentSlide > 0) {
-          setCurrentSlide(currentSlide - 1);
-        }
-      };
+  const nextSlide = () => {
+    setCurrentSlide((currentSlide + 1) % images.length)
+  }
 
-    return (
-        <div className="carrousel-all">
-            {slides.length > 0 && (
-                <>
-                {slides.length > 1 && (
-                    <img src={arrow_back} alt="Flèche gauche" onClick={prevSlide}/>
-                )}
-                <img src={slides[currentSlide]} alt="Slide"/>
-                {slides.length > 1 && (
-                    <img src={arrow_forward} alt="Flèche droite" onClick={nextSlide} />
-                )}
-                </>
-            )}
+  const prevSlide = () => {
+    setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1)
+  }
+
+
+  return (
+    <div>
+      {images.length > 1 && (
+        <div className="carrousel">
+          <img src={arrow_back} alt="Flèche gauche" onClick={prevSlide} className="carrousel_arrow_left" />
+          <img src={images[currentSlide]} alt="Card" className="carrousel_img" />
+          <img src={arrow_forward} alt="Flèche droite" onClick={nextSlide} className="carrousel_arrow_right" />
         </div>
-    )
+      )}
+      {images.length === 1 && <img src={images[0]} alt="Logement-img" />}
+    </div>
+  )
 }
-
 export default Carrousel
 
 
@@ -54,4 +39,34 @@ export default Carrousel
 
 // function prevSlide() {
 //     currentSlide > 0 ? setCurrentSlide(currentSlide - 1) : null
+// }
+
+// const nextSlide = () => {
+//   if (currentSlide < slides.length - 1) {
+//     setCurrentSlide(currentSlide + 1);
+//   }
+//   console.log("click")
+// };
+
+// const prevSlide = () => {
+//   if (currentSlide > 0) {
+//     setCurrentSlide(currentSlide - 1);
+//   }
+// };
+
+// return (
+//   <div className="carrousel">
+//       {slides.length > 0 && (
+//           <>
+//           {slides.length > 1 && (
+//               <img src={arrow_back} alt="Flèche gauche" onClick={prevSlide}/>
+//           )}
+//           <img src={slides[currentSlide]} alt="Slide"/>
+//           {slides.length > 1 && (
+//               <img src={arrow_forward} alt="Flèche droite" onClick={nextSlide} />
+//           )}
+//           </>
+//       )}
+//   </div>
+// )
 // }
