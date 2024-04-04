@@ -19,7 +19,20 @@
 
 .footer_text {
     display: flex;
+    font-family: 'Montserrat';
     color: #FFFFFF;
     font-size: 24px;
     margin-top: 40px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .footer_background {
+        margin-top: 0px;
+    }
+
+    .footer_text {
+        font-size: 12px;
+        margin: 15px 120px;
+    }
 }

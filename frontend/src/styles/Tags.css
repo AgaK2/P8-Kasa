@@ -15,3 +15,14 @@
     font-weight: 700;
     padding: 15px;
 }
+
+@media (max-width: 768px) {
+    .tags {
+        height: 18px;
+    }
+
+    .tag {
+        font-size: 10px;
+    }
+    
+}

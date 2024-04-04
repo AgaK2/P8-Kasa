@@ -3,8 +3,6 @@
     position: relative;
     justify-content: center;
     align-items: center;
-   
-
 }
 
 .carrousel_img {
@@ -37,4 +35,28 @@
     font-size: 18px;
     font-weight: 500;
     bottom: 25px;
+}
+
+@media (max-width: 768px) {
+    .carrousel_img {
+        border-radius: 10px;
+        height: 255px;
+    }
+
+    .carrousel_arrow_left,
+    .carrousel_arrow_right {
+        height: 28px;
+    }
+
+    .carrousel_arrow_left {
+        left: 0px;
+    }
+
+    .carrousel_arrow_right {
+        right: 0px;
+    }
+
+    .carrousel_pagination {
+        display: none;
+    }
 }

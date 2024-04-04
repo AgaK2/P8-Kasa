@@ -24,3 +24,14 @@
     width: 64px;
     border-radius: 90px;
 }
+
+@media (max-width: 768px) {
+    .host_name {
+        font-size: 12px;
+    }
+
+    .host_picture {
+        height: 32px;
+        width: 32px;
+    }
+}

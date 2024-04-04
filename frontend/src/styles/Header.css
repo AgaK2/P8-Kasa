@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 45px 0px 50px 0px;
+    margin-bottom: 50px;
 }
 
 .header_nav {
@@ -19,4 +19,26 @@
 
 .underline {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .header {
+        margin-bottom: 27px;
+    }
+
+    .header_nav {
+        gap: 26px;
+        margin-left: 3px;
+    }
+
+    .header_link {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .header img {
+        width: 145px;
+        height: 47px;
+    }
+
 }

@@ -59,3 +59,40 @@
 .rotate {
     transform: rotate(-180deg);
 }
+
+
+@media (max-width: 768px) {
+    .collapse_all {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .collapse_item {
+        height: 30px;
+    }
+
+    .collapse_title {
+        font-size: 13px;
+        margin: 7px 10px 10px;
+    }
+
+    .collapse_content {
+        font-size: 12px;
+        margin: 15px 20px;
+    }
+
+    .arrow {
+        width: 20px;
+        height: 20px;
+        margin: 5px 10px;
+    }
+
+    .collapse_list {
+        font-size: 12px;
+        margin-top: 15px;
+    }
+
+    .collapse_list li {
+        margin-bottom: 3px;
+    }
+}

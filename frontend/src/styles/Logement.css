@@ -33,11 +33,46 @@
  }
 
  .logement_collapse h3 {
-    font-size: 18px;
-    margin: auto 10px;
+     font-size: 18px;
+     margin: auto 10px;
  }
 
- .logement_collapse p{
-    margin-top: 28px;
-    margin-bottom: 30px;
+ .logement_collapse p {
+     margin-top: 28px;
+     margin-bottom: 30px;
+ }
+
+ @media (max-width: 768px) {
+     .logement_title {
+         font-size: 18px;
+     }
+
+     .logement_location {
+         font-size: 14px;
+     }
+
+     .logement_title_host {
+         flex-direction: column;
+     }
+
+     .logement_host_rate {
+         flex-direction: row-reverse;
+         margin-top: 0px;
+     }
+
+     .logement_collapse {
+         display: flex;
+         flex-direction: column;
+         gap: 0px;
+     }
+
+     .logement_collapse h3 {
+         font-size: 13px;
+         margin: 7px 10px 10px;
+     }
+
+     .logement_collapse p {
+         margin-top: 15px;
+         margin-bottom: 18px;
+     }
  }
