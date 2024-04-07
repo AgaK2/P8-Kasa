@@ -26,6 +26,10 @@
 }
 
 @media (max-width: 768px) {
+    .host {
+        margin-bottom: 13px;
+    }
+    
     .host_name {
         font-size: 12px;
     }

@@ -22,7 +22,7 @@ function Rate({ rate }) {
 
 
     return (
-        <div>
+        <div className="rate">
             {ratingStars()}
         </div>
     )

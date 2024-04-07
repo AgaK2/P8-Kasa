@@ -16,7 +16,7 @@ function Header() {
                 <img src={logo} alt="KASA logo" />
             </div>
             <nav className="header_nav">
-                <Link to="/" onClick={() => linkClick("/")} className={`header_link ${activeLink === "/" ? "underline" : "none"}`}>Accueil</Link>
+                <Link to="/" onClick={() => linkClick("/")} className={`header_link ${activeLink === "/" ? "underline" : ""}`}>Accueil</Link>
                 <Link to="/apropos" onClick={() => linkClick("/apropos")} className={`header_link ${activeLink === "/apropos" ? "underline" : ""}`}>A Propos</Link>
             </nav>
         </header>

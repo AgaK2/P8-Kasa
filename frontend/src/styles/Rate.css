@@ -1,6 +1,9 @@
 @media (max-width: 768px) {
     .rate_star {
         height: 18px;
+    }
 
+    .rate {
+        margin-bottom: 8px;
     }
 }
