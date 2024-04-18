@@ -60,6 +60,17 @@
     transform: rotate(-180deg);
 }
 
+@media (max-width: 1024px) {
+    .collapse_item {
+        height: 45px;
+    }
+
+    .arrow {
+        width: 25px;
+        height: 25px;
+        margin: 10px 10px;
+    }
+}
 
 @media (max-width: 768px) {
     .collapse_all {

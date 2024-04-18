@@ -1,7 +1,7 @@
 import { useState } from "react"
 import arrow_forward from "../assets/arrow_forward_carrousel.png"
 import arrow_back from "../assets/arrow_back_carrousel.png"
-import "../styles/Carrousel.css"
+import "../styles/Gallery.css"
 
 
 function Carrousel({ images }) {

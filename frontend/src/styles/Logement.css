@@ -42,6 +42,17 @@
      margin-bottom: 30px;
  }
 
+ @media (max-width: 1024px) {
+     .logement_collapse h3 {
+         margin: 12px 10px;
+     }
+
+     .logement_title {
+        font-size: 28px;
+        margin-right: 15px;
+     }
+ }
+
  @media (max-width: 768px) {
      .logement_title {
          font-size: 18px;

@@ -1,5 +1,5 @@
 import Banner from "../components/Banner"
-import Gallery from "../components/GalleryCards"
+import GalleryCards from "../components/GalleryCards"
 import banner_1 from "../assets/banner_1.png"
 import "../styles/Home.css"
 
@@ -12,7 +12,7 @@ function Home() {
                 alt="Paysage - mer et rochers"
                 text="Chez vous, partout et ailleurs"
                 withShadowAndDarken={true} />
-            <Gallery />
+            <GalleryCards />
         </div>
     )
 }

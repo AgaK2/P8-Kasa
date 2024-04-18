@@ -34,6 +34,20 @@
     filter: brightness(40%);
 }
 
+@media (max-width: 1024px) {
+    .banner_text {
+        font-size: 32px;
+    }
+
+    .banner {
+        height: 190px;
+    }
+
+    .banner_img {
+        border-radius: 15px;
+    }
+}
+
 @media (max-width: 768px) {
     .banner {
         height: 111px;

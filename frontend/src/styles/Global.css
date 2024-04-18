@@ -1,6 +1,6 @@
 .global {
-  max-width: 1240px;
-  margin: -8px;
+  max-width: 1440px;
+  margin: auto;
   font-family: 'Montserrat';
   padding: 45px 100px 0px;
 }

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import "../styles/GalleryCards.css"
 import { useState, useEffect } from 'react'
 
-function Gallery() {
+function GalleryCards() {
     const [properties, setProperties] = useState([])
 
    // Appel à l'API avec fetch afin de récupérer dynamiquement des images
@@ -30,4 +30,4 @@ function Gallery() {
     )
 }
 
-export default Gallery
+export default GalleryCards

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import Carrousel from "../components/Carrousel"
+import Carrousel from "../components/Gallery"
 import Collapse from '../components/Collapse'
 import Tags from '../components/Tags'
 import Host from '../components/Host'

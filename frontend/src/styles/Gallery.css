@@ -18,7 +18,7 @@
 .carrousel_arrow_left,
 .carrousel_arrow_right {
     position: absolute;
-    cursor: pointer;
+    cursor: pointer; 
 }
 
 .carrousel_arrow_left {
@@ -37,15 +37,15 @@
     bottom: 25px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .carrousel_img {
-        border-radius: 10px;
-        height: 255px;
+        border-radius: 15px;
+        height: 325px;
     }
 
     .carrousel_arrow_left,
     .carrousel_arrow_right {
-        height: 28px;
+        height: 70px;
     }
 
     .carrousel_arrow_left {
@@ -54,6 +54,18 @@
 
     .carrousel_arrow_right {
         right: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carrousel_img {
+        border-radius: 10px;
+        height: 255px;
+    }
+
+    .carrousel_arrow_left,
+    .carrousel_arrow_right {
+        height: 30px;
     }
 
     .carrousel_pagination {

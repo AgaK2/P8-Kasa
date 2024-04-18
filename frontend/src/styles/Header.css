@@ -21,6 +21,17 @@
     text-decoration: underline;
 }
 
+@media (max-width: 1024px) {
+    .header_link {
+        font-size: 18px;
+    }
+
+    .header img {
+        height: 55px;
+    }
+
+}
+
 @media (max-width: 768px) {
     .header {
         margin-bottom: 27px;
