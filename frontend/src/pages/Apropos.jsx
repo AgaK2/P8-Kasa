@@ -12,7 +12,7 @@ function Apropos() {
                 image={banner_2}
                 alt="Une vallée entre de hautes montagnes enneigées"
             />
-            {collapseTextAPropos.map((item, index) => (  //Mapping de chaque élément du tableau
+            {collapseTextAPropos.map((item, index) => (  //Mapping de chaque élément du tableau d'objets.
                 <Collapse
                     key={index}
                     title={item.title}

@@ -1,3 +1,4 @@
+// Tableau d'objets utilisés sur la page <<À propos>> dans les composants Collapse
 export const collapseTextAPropos = [
     {
         title: 'Fiabilité',

@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom"
-import logo from "../assets/logo.png"
 import { useState } from "react"
+import logo from "../assets/logo.png"
 import "../styles/Header.css"
 
 function Header() {
-    const [activeLink, setActiveLink] = useState("")
+    const [activeLink, setActiveLink] = useState("") // String vide signifie qu'aucun lien actif n'est sélectionné au début.
 
-    function linkClick(e) {
+    const linkClick = (e) => {
         setActiveLink(e)
     }
 

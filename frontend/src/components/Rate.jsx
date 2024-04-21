@@ -5,10 +5,11 @@ import "../styles/Rate.css"
 function Rate({ rate }) {
 
     const maxStars = 5
-    const filledStars = parseInt(rate) //dopisac co to
+    const filledStars = parseInt(rate) // Convertir une chaîne de caractères en nombre.
     const emptyStars = maxStars - filledStars
 
-    function ratingStars() {
+    // Combinant deux tableaux d'étoiles - le premier contenant des étoiles remplies et le second contenant des étoiles vides.
+    const ratingStars = () => {
         let stars = Array(filledStars).fill().map((_, i) => (
             <img src={star_active} alt="Star active" key={i} className="rate_star"/>)
         )
@@ -29,14 +30,3 @@ function Rate({ rate }) {
 }
 
 export default Rate
-
-// const ratingStars = () => {
-//     let stars = []
-//     for (let i = 0; i < filledStars; i++) {
-//       stars.push(<img src={star_active} alt="Star" key={i} className="rate_star"/>)
-//     }
-//     for (let i = 0; i < emptyStars; i++) {
-//       stars.push(<img src={star_inactive} alt="Star" key={i + filledStars} className="rate_star"/>)
-//     }
-//     return stars
-//   }
